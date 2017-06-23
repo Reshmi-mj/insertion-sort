@@ -15,6 +15,16 @@ int sort(int *a)
   return 0;
 }
 
+int read(int *a)
+{
+  int size,i;
+  printf("Size: ");
+  scanf("%d",&size);
+  for(i=0;i<size;i++)
+    scanf("%d",&a[i]);
+  return size;
+}
+
 int main()
 {
   int a[7] = {4,23,43,38,15,10,30};
