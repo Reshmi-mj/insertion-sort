@@ -1,9 +1,9 @@
 #include<stdio.h>
 
-int sort(int *a)
+int sort(int *a,int size)
 {
   int i,j,t;
-  for(i=1;i<7;i++)
+  for(i=1;i<size;i++)
     {
       for(j=i;j>0&&a[j]<a[j-1];j--)
 	{
@@ -27,11 +27,12 @@ int read(int *a)
 
 int main()
 {
-  int a[7] = {4,23,43,38,15,10,30};
+  int a[100];
+  int size = read(a);
   int i;
-  sort(a);
+  sort(a,size);
   printf("Sorted array:\n");
-  for(i=0;i<7;i++)
+  for(i=0;i<size;i++)
     printf("%d ",a[i]);
   printf("\n");
 
